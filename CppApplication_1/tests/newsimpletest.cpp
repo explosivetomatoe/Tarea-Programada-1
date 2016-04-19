@@ -54,7 +54,7 @@ void testPolinomio() {
     }
 }
 
-/*
+
 void testPolinomio2() {
     const Polinomio& orig;
     Polinomio polinomio(orig);
@@ -63,7 +63,7 @@ void testPolinomio2() {
         std::cout << "%TEST_FAILED% time=0 testname=testPolinomio2 (newsimpletest) message=error message sample" << std::endl;
     }
 }
-
+/*
 void testPolinomio3() {
     const string& expoli;
     Polinomio polinomio(expoli);
@@ -118,10 +118,11 @@ int main(int argc, char** argv) {
      std::cout << "%TEST_STARTED% testPolinomio3 (newsimpletest)" << std::endl;
      testPolinomio3();
      std::cout << "%TEST_FINISHED% time=0 testPolinomio3 (newsimpletest)" << std::endl;
-
+*/
      std::cout << "%TEST_STARTED% testPolinomio2 (newsimpletest)" << std::endl;
      testPolinomio2();
      std::cout << "%TEST_FINISHED% time=0 testPolinomio2 (newsimpletest)" << std::endl;
+     /*
     
     std::cout << "%TEST_STARTED% testAHil (newsimpletest)" << std::endl;
     testAHil();
