@@ -59,6 +59,8 @@ string Polinomio::aHil(){
     while (ss >> temp)
     array.push_back(temp); // done! now array={102,330,3133,76531,451,000,12,44412}
     */
+    string hil="";
+    for(int i=0;i<hil)
     
 }
 
