@@ -56,30 +56,30 @@ void testPolinomio() {
 
 
 void testPolinomio2() {
-    const Polinomio& orig;
+     const Polinomio& orig;
     Polinomio polinomio(orig);
     string h = polinomio.aHil();
     if (h != "{}") {
         std::cout << "%TEST_FAILED% time=0 testname=testPolinomio2 (newsimpletest) message=error message sample" << std::endl;
     }
 }
-/*
+
 void testPolinomio3() {
-    const string& expoli;
+    const string& expoli = "0.0X(3)Y(2)";
     Polinomio polinomio(expoli);
     string str = polinomio.aHil();    
     if (str[1] == 0) {
         std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=error message sample" << std::endl;
     }
-}*/
+}
 
-void testAHil() {
+/*void testAHil() {
     Polinomio polinomio;
     string result = polinomio.aHil();
-    if (true /*check result*/) {
+    if (true /*check result*//*) {
         std::cout << "%TEST_FAILED% time=0 testname=testAHil (newsimpletest) message=error message sample" << std::endl;
     }
-}
+}*/
 
 void testEval() {
     double x;
