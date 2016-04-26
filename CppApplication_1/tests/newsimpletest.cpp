@@ -13,42 +13,10 @@
 /*
  * Simple C++ Test Suite
  */
-
 void testPolinomio() {
     Polinomio polinomio();
-    string standar = "0.0X(0)Y(0)";
-    string m= ""
-    string h1 = "0.0"; //polinomio.aHil();  
-    string    
-    int i = 0;
-    bool limit = false;
-    int ctr = 0;
-    for(ctr=1;ctr<=5; ctr++)
-    {
-        if (ctr == 1)
-                m =h1;
-        else if (ctr == 1)
-                m =h2;
-        else if (ctr == 1)
-                m =h3;
-        else if (ctr == 1)
-                m =h4;
-        else if (ctr == 1)
-                m =h5;                
-        while ((m[i] != 'X') && (m[i] == '0' || (m[i] == '.'))) 
-        {
-            i++;
-        }
-    }
-    if (i == m.length()) 
-    {
-        limit = true;
-    }
-    if (limit) 
-    {
-        std::cout << standar << std::endl;
-    } 
-    else 
+    string standar = "0.00X(0)Y(0)"; 
+    if (polinomio.aHil() != standar)  
     {
         std::cout << "%TEST_FAILED% time=0 testname=testPolinomio (newsimpletest) fallo monomio 0" << std::endl;
     }
@@ -56,30 +24,75 @@ void testPolinomio() {
 
 
 void testPolinomio2() {
-     const Polinomio& orig;
+    Polinomio orig;
     Polinomio polinomio(orig);
+    string standar = "0.00X(0)Y(0)"; 
     string h = polinomio.aHil();
-    if (h != "{}") {
-        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio2 (newsimpletest) message=error message sample" << std::endl;
+    if (h != standar) {
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio2 (newsimpletest) message=Fallo reporte 0.00X(0)Y(0)" << std::endl;
     }
+    Polinomio orig2;
+    Polinomio polinomio2(orig2);
+    string standar2 = "5.33X(4)Y(2)+7.43X(4)Y(1)";
+    string h2 = polinomio2.aHil();
+    if (h2 != standar2) {
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio2 (newsimpletest) message=Fallo reporte 5.33X(4)Y(2)+7.43X(4)Y(1)" << std::endl;
+    } 
+    
 }
 
 void testPolinomio3() {
-    const string& expoli = "0.0X(3)Y(2)";
+    string expoli = "0.0";
+    string expoli2 = "0X(0)Y(0)" ; 
+    string expoli3 = "0.00X(0)Y(0)" ;  
+    string expoli4 = "0.00X(3)Y(2)+0X(2)Y(1)+0X(0)Y(0)"; 
+    string expoli5 = "0X(5)Y(4)+0.00X(3)Y(2)+2.55X(0)Y(0)";  
+    string expoli6 =  "0X(5)Y(4)+2.5X(0)Y(0)" ;  
+    string expoli7 =  "6X(5)Y(3)+3X(3)Y(2)+5X(1)Y(1)+3X(0)Y(1)+4X(0)Y(0)"; 
+    string expoli8 = "7.5X(5)Y(3)+3.2X(3)Y(2)+5.0X(1)Y(0)+4.2X(0)Y(0)";  
+    string expoli9 = "1.5X(0)Y(2)-3X(2)Y(1)"; 
+    string expoli10 = "3.2X(3)Y(2)+7.5X(5)Y(3)+5.0X(1)Y(0)+4.2+7.5X(5)Y(3)";  
+    string expoli11 = "7.5X(5)Y(3)-2.5X(5)Y(3)+5.0X(1)Y(0)-3.2X(3)Y(2)-4.2+7.5X(5)Y(3)";  
+    string expoli12 =  "+4X(0)Y(0)-6X(5)Y(3)+5X(3)Y(2)-3X(0)Y(1)-3X(3)Y(2)";       
     Polinomio polinomio(expoli);
-    string str = polinomio.aHil();    
-    if (str[1] == 0) {
-        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=error message sample" << std::endl;
-    }
+    Polinomio polinomio2(expoli2);
+    Polinomio polinomio3(expoli3);
+    Polinomio polinomio4(expoli4);
+    Polinomio polinomio5(expoli5);
+    Polinomio polinomio6(expoli6);
+    Polinomio polinomio7(expoli7);
+    Polinomio polinomio8(expoli8);
+    Polinomio polinomio9(expoli9);
+    Polinomio polinomio10(expoli10);
+    Polinomio polinomio11(expoli11);
+    Polinomio polinomio12(expoli12);
+    //polinomio.aHil();    
+    if (polinomio.aHil() != "0.00X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 0.00X(0)Y(0)" << std::endl;   
+    if (polinomio2.aHil() != "0.00X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 0.00X(0)Y(0)" << std::endl;    
+     if (polinomio3.aHil() != "0.00X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 0.00X(0)Y(0)" << std::endl;   
+    if (polinomio4.aHil() != "0.00X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 0.00X(0)Y(0)" << std::endl;    
+     if (polinomio5.aHil() !=  "2.50X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 2.50X(0)Y(0)" << std::endl;   
+    if (polinomio6.aHil() != "2.50X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 2.50X(0)Y(0)" << std::endl;    
+     if (polinomio7.aHil() != "6.00X(5)Y(3)+3.00X(3)Y(2)+5.00X(1)Y(1)+3.00X(0)Y(1)+4.00X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 6.00X(5)Y(3)+3.00X(3)Y(2)+5.00X(1)Y(1)+3.00X(0)Y(1)+4.00X(0)Y(0)" << std::endl;   
+    if (polinomio8.aHil() != "7.50X(5)Y(3)+3.20X(3)Y(2)+5.00X(1)Y(0)+4.20X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 7.50X(5)Y(3)+3.20X(3)Y(2)+5.00X(1)Y(0)+4.20X(0)Y(0)" << std::endl;    
+     if (polinomio9.aHil() != "-3.00X(2)Y(1)+1.50X(0)Y(2)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte -3.00X(2)Y(1)+1.50X(0)Y(2)" << std::endl;   
+    if (polinomio10.aHil() != "7.50X(5)Y(3)+7.50X(5)Y(3)+3.20X(3)Y(2)+5.00X(1)Y(0)+4.20") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 7.50X(5)Y(3)+7.50X(5)Y(3)+3.20X(3)Y(2)+5.00X(1)Y(0)+4.20" << std::endl;    
+     if (polinomio11.aHil() != "7.50X(5)Y(3)-2.50X(5)Y(3)+5.00X(1)Y(0)-3.2X(3)Y(2)-4.20+7.50X(5)Y(3)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte 7.50X(5)Y(3)-2.50X(5)Y(3)+5.00X(1)Y(0)-3.2X(3)Y(2)-4.20+7.50X(5)Y(3)" << std::endl;   
+    if (polinomio12.aHil() != "-6.00X(5)Y(3)+5.00X(3)Y(2)-3.00X(3)Y(2)-3.00X(0)Y(1)+4.00X(0)Y(0)") 
+        std::cout << "%TEST_FAILED% time=0 testname=testPolinomio3 (newsimpletest) message=Fallo reporte -6.00X(5)Y(3)+5.00X(3)Y(2)-3.00X(3)Y(2)-3.00X(0)Y(1)+4.00X(0)Y(0)" << std::endl;    
 }
 
-/*void testAHil() {
-    Polinomio polinomio;
-    string result = polinomio.aHil();
-    if (true /*check result*//*) {
-        std::cout << "%TEST_FAILED% time=0 testname=testAHil (newsimpletest) message=error message sample" << std::endl;
-    }
-}*/
 
 void testEval() {
     double x;
