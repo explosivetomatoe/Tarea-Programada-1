@@ -1,6 +1,6 @@
 /* 
  * File:   newsimpletest.cpp
- * Author: b41624
+ * Author: b41624, b12244
  *
  * Created on 07/04/2016, 05:46:42 PM
  */
@@ -99,7 +99,7 @@ void testEval() {
     double y;
     Polinomio polinomio;
     double result = polinomio.eval(x, y);
-    if (true /*check result*/) {
+    if (true ) {
         std::cout << "%TEST_FAILED% time=0 testname=testEval (newsimpletest) message=error message sample" << std::endl;
     }
 }
@@ -107,7 +107,7 @@ void testEval() {
 void testVerGrado() {
     Polinomio polinomio;
     int result = polinomio.verGrado();
-    if (true /*check result*/) {
+    if (true ) {
         std::cout << "%TEST_FAILED% time=0 testname=testVerGrado (newsimpletest) message=error message sample" << std::endl;
     }
 }
@@ -115,7 +115,7 @@ void testVerGrado() {
 void testVerInv() {
     Polinomio polinomio;
     bool result = polinomio.verInv();
-    if (true /*check result*/) {
+    if (true ) {
         std::cout << "%TEST_FAILED% time=0 testname=testVerInv (newsimpletest) message=error message sample" << std::endl;
     }
 }
